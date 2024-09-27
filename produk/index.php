@@ -16,7 +16,7 @@ include('../includes/header.php');
  </thead>
  <tbody>
  <?php
- $sql = "SELECT * FROM products ORDER BY name";
+ $sql = "SELECT * FROM products ORDER BY nama";
  $result = $conn->query($sql);
  if ($result->num_rows > 0):
  $no = 1; 
@@ -24,7 +24,7 @@ while ($row = $result->fetch_assoc()):
  ?>
  <tr>
  <td><?= $no++; ?></td>
- <td><?= $row['name']; ?></td>
+ <td><?= $row['nama']; ?></td>
  <td><?= $row['description']; ?></td>
  <td>Rp. <?= number_format($row['price']); ?></td>
  <td>

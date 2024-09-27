@@ -4,7 +4,8 @@ include('../includes/header.php');
 $id = $_GET['id'];
 $sql = "SELECT * FROM products WHERE id = $id";
 $result = $conn->query($sql);
-$row = $result->fetch_assoc();  ?>
+$row = $result->fetch_assoc();
+?>
 <h2>Edit Produk</h2>
 <form method="POST" action="">
  <div class="form-group mb-3">
