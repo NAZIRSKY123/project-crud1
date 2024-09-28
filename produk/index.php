@@ -2,6 +2,7 @@
 include('../config.php');
 include('../includes/header.php');
 ?>
+
 <h2>Daftar Produk</h2>
 <a href="add.php" class="btn btn-success mb-3">Tambah Data</a>
 <table class="table table-bordered">
