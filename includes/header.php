@@ -45,6 +45,8 @@ data-bs-toggle="dropdown" aria-expanded="false">
  <ul class="dropdown-menu">
  <li><a class="dropdown-item" href="../produk/index.php">
 Produk</a></li>
+<li><a class="dropdown-item" href="../karyawan/index.php">
+Karyawan</a></li>
  </ul>
  </li>
  <li class="nav-item dropdown">
@@ -53,8 +55,10 @@ data-bs-toggle="dropdown" aria-expanded="false">
  Laporan
  </a>
  <ul class="dropdown-menu">
- <li><a class="dropdown-item" href="../laporan/produk.php">
-Laporan Produk</a></li> 
+ <li><a class="dropdown-item" href="../laporan1/produk.php">
+laporan1 Produk</a></li> 
+<li><a class="dropdown-item" href="../laporan/karyawan.php">
+Laporan Karyawan</a></li> 
  </ul>
  </li>
  </ul>
