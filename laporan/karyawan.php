@@ -5,13 +5,13 @@ include('../includes/header.php');
 <h2>Laporan Karyawan</h2>
 <form method="GET" action="">
  <div class="form-group mb-3">
- <label for="filter_stock">Filter Karyawan</label>
- <select name="filter_stock" class="form-control">
+ <label for="filter_nama">Filter Karyawan</label>
+ <select name="filter_nama" class="form-control">
  <option value="">Semua Karyawan</option>
- <option value="out_of_stock" <?php if (isset($_GET['filter_stock']) && 
-$_GET['filter_stock'] == 'out_of_stock') echo 'selected'; ?>>Stok Habis</option>
- <option value="in_stock" <?php if (isset($_GET['filter_stock']) && 
-$_GET['filter_stock'] == 'in_stock') echo 'selected'; ?>>Stok Tersedia</option>
+ <option value="nama" <?php if (isset($_GET['filter_nama']) && 
+$_GET['filter_nama'] == 'nama') echo 'selected'; ?>>Gaji</option>
+ <option value="nama" <?php if (isset($_GET['filter_nama']) && 
+$_GET['filter_jabatan'] == 'jabatan') echo 'selected'; ?>>Jabatan</option>
  </select>
  </div>
  <button type="submit" class="btn btn-primary">Tampilkan</button>
@@ -31,12 +31,12 @@ Cetak Laporan</button>
 <tbody>
 <?php
  $where_clause = "";
- if (isset($_GET['filter_stock']) && $_GET['filter_stock'] != "") { 
-$filter_stock = $_GET['filter_stock'];
- if ($filter_stock == "out_of_stock") {
- $where_clause = "WHERE stock = 0";
- } elseif ($filter_stock == "in_stock") {
- $where_clause = "WHERE stock > 0";
+ if (isset($_GET['filter_nama']) && $_GET['filter_jabatan'] != "") { 
+$filter_nama = $_GET['filter_nama'];
+ if ($filter_nama == "nama") {
+ $where_clause = "WHERE nama= Nazira";
+ } elseif ($filter_jabatan == "Jabatan") {
+ $where_clause = "WHERE jabatan > CEO";
  }
  }
  $sql = "SELECT * FROM karyawan $where_clause";

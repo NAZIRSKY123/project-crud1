@@ -5,27 +5,32 @@ include('../includes/header.php');
 <h2>Tambah Karyawan</h2>
 <form method="POST" action="">
  <div class="form-group mb-3">
- <label for="name">Nama Karyawan</label> 
-<input type="text" name="name" class="form-control" required>
+ <label for="nama">Nama Karyawan</label> 
+<input type="text" name="nama" class="form-control" required>
 </div>
- <div class="form-group mb-3">
- <label for="description">Gaji</label>
- <textarea name="description" class="form-control" required></textarea>
+<div class="form-group mb-3">
+ <label for="gaji">Gaji</label>
+ <input type="text" name="gaji" class="form-control" required>
  </div>
  <div class="form-group mb-3">
- <label for="price">Tanggal Bergabung</label>
- <input type="number" name="price" class="form-control" required>
+ <label for="jabatan">Jabatan</label>
+ <input type="text" name="jabatan" class="form-control" required>
+ </div>
+ <div class="form-group mb-3">
+ <label for="alamat">Alamat</label>
+ <input type="text" name="alamat" class="form-control" required>
  </div>
 <button type="submit" name="submit" class="btn btn-success">Simpan</button>
 </form>
  <?php include('../includes/footer.php'); ?>
 <?php
 if (isset($_POST['submit'])) { 
- $name = $_POST['name'];
- $description = $_POST['description'];
- $price = $_POST['price'];
-$sql = "INSERT INTO products (name, description, price) 
- VALUES ('$name', '$description', '$price')";
+ $nama = $_POST['nama'];
+ $gaji = $_POST['gaji'];
+ $jabatan = $_POST['jabatan'];
+ $alamat = $_POST['alamat'];
+ $sql = "INSERT INTO karyawan (nama, gaji, jabatan, alamat) 
+ VALUES ('$nama', '$gaji', '$jabatan', '$alamat')";
 if ($conn->query($sql) === TRUE) {
  header("Location: index.php");
  } else {

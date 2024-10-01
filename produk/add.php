@@ -5,8 +5,8 @@ include('../includes/header.php');
 <h2>Tambah Produk</h2>
 <form method="POST" action="">
  <div class="form-group mb-3">
- <label for="name">Nama Produk</label> 
-<input type="text" name="name" class="form-control" required>
+ <label for="nama">Nama Produk</label> 
+<input type="text" name="nama" class="form-control" required>
 </div>
  <div class="form-group mb-3">
  <label for="description">Deskripsi</label>
@@ -21,10 +21,10 @@ include('../includes/header.php');
  <?php include('../includes/footer.php'); ?>
 <?php
 if (isset($_POST['submit'])) { 
- $name = $_POST['name'];
+ $name = $_POST['nama'];
  $description = $_POST['description'];
  $price = $_POST['price'];
-$sql = "INSERT INTO products (name, description, price) 
+$sql = "INSERT INTO products (nama, description, price) 
  VALUES ('$name', '$description', '$price')";
 if ($conn->query($sql) === TRUE) {
  header("Location: index.php");

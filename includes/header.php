@@ -55,8 +55,8 @@ data-bs-toggle="dropdown" aria-expanded="false">
  Laporan
  </a>
  <ul class="dropdown-menu">
- <li><a class="dropdown-item" href="../laporan1/produk.php">
-laporan1 Produk</a></li> 
+ <li><a class="dropdown-item" href="../laporan/produk.php">
+laporan Produk</a></li> 
 <li><a class="dropdown-item" href="../laporan/karyawan.php">
 Laporan Karyawan</a></li> 
  </ul>
